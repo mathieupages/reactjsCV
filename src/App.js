@@ -2,19 +2,17 @@ import React, {useState} from 'react';
 import { Layer, Box, Grommet, Heading, Button, Collapsible, ResponsiveContext, Image } from 'grommet';
 import { FormClose, Notification } from 'grommet-icons';
 import Navbar from './Navbar.js'
-import Background from './background.png'
+import Background from './background3.png'
 
 
 
 const theme = {
 global: {
-colors : {
-    background: Background,
-},
 font: {
   family: 'Roboto',
   size: '18px',
   height: '20px',
+  colors: 'white',
 },
 },
 };
@@ -25,7 +23,7 @@ return (
 <Grommet theme={theme} full>
   <ResponsiveContext.Consumer>
     {size => (
-        <Box fill>
+      <Box fill style={{backgroundImage: `url(${Background})`}}>
       <Navbar>test</Navbar>
         <Heading level='3' margin='non'>My App</Heading>
         <Button icon={<Notification />} onClick={() => setShowSidebar(!showSidebar)} />

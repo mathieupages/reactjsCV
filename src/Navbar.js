@@ -6,10 +6,10 @@ const Navbar = () =>{
     return(
         <Box>
             <Nav align="center" justify="center" direction="row-responsive">
-                <Text><Anchor icon={<Home />} hoverIndicator /> About </Text>
-                <Text><Anchor icon={<Info />} hoverIndicator /> Description</Text>
-                <Text><Anchor icon={<Achievement />} hoverIndicator /> Formation</Text>
-                <Text><Anchor icon={<ChatOption />} hoverIndicator /> Expérience professionnelle</Text>
+                <Text color="white"><Anchor icon={<Home />} color="white" hoverIndicator /> About </Text>
+                <Text color="white"><Anchor icon={<Info />} color="white" hoverIndicator /> Description</Text>
+                <Text color="white"><Anchor icon={<Achievement />} color="white" hoverIndicator /> Formation</Text>
+                <Text color="white"><Anchor icon={<ChatOption />} color="white" hoverIndicator /> Expérience professionnelle</Text>
             </Nav>
         </Box>
     );
