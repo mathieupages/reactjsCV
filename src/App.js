@@ -1,13 +1,12 @@
 import React, {useState} from 'react';
 import { Layer, Box, Grommet, Button, Collapsible, ResponsiveContext } from 'grommet';
-import { FormClose, Notification } from 'grommet-icons';
 import Navbar from './Navbar.js'
 import About from './About.js'
 import Contact from './Contact.js'
 import Formation from './Formation.js'
 import Description from './Description.js'
 import Exppro from './Exppro.js'
-import background from './background3.png'
+import background from './background4.jpg'
 
 
 
@@ -49,7 +48,7 @@ return (
           <Box
             flex
             width='medium'
-            background='light-1'
+            background={{ color: "light-1", opacity: "0.7" }}
             elevation='small'
             align='center'
             justify='center'
@@ -60,7 +59,7 @@ return (
         ): (
           <Layer>
             <Box
-              background='light-1'
+              background={{ color: "light-1", opacity: "0.7" }}
               tag='header'
               justify='end'
               align='center'
@@ -69,7 +68,7 @@ return (
             </Box>
             <Box
               fill
-              background='light-1'
+              background={{ color: "light-1", opacity: "0.7" }}
               align='center'
               justify='center'
               >

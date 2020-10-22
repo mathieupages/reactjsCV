@@ -11,7 +11,7 @@ const Contact = () => {
                     src="./photo.jpg"
                 />
             </Box>
-            <Heading color="Black"> Contact </Heading>
+            <Heading level="2" color="Black"> Contact </Heading>
             <Text color="Black">27 mai 1990</Text>
 
             <Text color="Black">06.75.51.01.41</Text>
