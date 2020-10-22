@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Layer, Box, Grommet, Heading, Button, Collapsible, ResponsiveContext, Image } from 'grommet';
+import { Layer, Box, Grommet, Button, Collapsible, ResponsiveContext } from 'grommet';
 import { FormClose, Notification } from 'grommet-icons';
 import Navbar from './Navbar.js'
 import About from './About.js'
@@ -23,29 +23,28 @@ font: {
 };
 
 function App() {
-const [showSidebar, setShowSidebar] = useState(true);
+const [showSidebar, setShowSidebar] = useState(false);
 const [isSelected, setisSelected] = useState("ABOUT");
 return (
 <Grommet theme={theme} full>
   <ResponsiveContext.Consumer>
     {size => (
       <Box fill style={{backgroundImage: `url(${background})`}}>
-      <Navbar setisSelected={setisSelected} ></Navbar>
-        <Button icon={<Notification />} onClick={() => setShowSidebar(!showSidebar)} />
+          <Navbar setisSelected={setisSelected} setShowSidebar={setShowSidebar} showSidebar={showSidebar} ></Navbar>
       <Box direction='row' flex overflow={{ horizontal : 'hidden' }}>
         <Box flex align='center' justify='center'>
           {
-          isSelected === "ABOUT" ?
-          <About ></About>
-          : isSelected === "DESCRIPTION" ?
-          <Description></Description>
-          : isSelected === "FORMATION" ?
-          <Formation></Formation>
-          :   isSelected === "EXPPRO" ?
-          <Exppro></Exppro> : <About></About>
-        }
+            isSelected === "ABOUT" ?
+            <About ></About>
+            : isSelected === "DESCRIPTION" ?
+            <Description></Description>
+            : isSelected === "FORMATION" ?
+            <Formation></Formation>
+            :   isSelected === "EXPPRO" &&
+            <Exppro></Exppro> 
+          }
         </Box>
-        {(!showSidebar || size !== 'small') ? (
+            {(!showSidebar || size !== 'small') ? (
           <Collapsible direction="horizontal" open={showSidebar}>
           <Box
             flex
@@ -67,10 +66,6 @@ return (
               align='center'
               direction='row'
               >
-              <Button
-                icon={<FormClose />}
-                onClick={() => setShowSidebar(false)}
-                />
             </Box>
             <Box
               fill

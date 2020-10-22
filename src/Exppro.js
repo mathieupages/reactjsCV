@@ -4,7 +4,7 @@ import { Facebook, Instagram, Linkedin, Github } from 'grommet-icons'
 
 const Exppro = () => {
     return (
-        <Card height="large" width="large" background="light-0">
+        <Card height="large" width="large" background="light-1">
             <CardHeader align='center' justify='center' pad="large"><Text color='white' size='20px' >Exppro</Text></CardHeader>
             <CardBody align='center' pad="large"><Text color='white' size='18px'>Je suis étudiant à Ynov, Je n'ai jamais fait de ReactJS et j'essaie de créer mon curriculum vitae en :</Text></CardBody>
             <CardFooter background="light-0" justify="center">
