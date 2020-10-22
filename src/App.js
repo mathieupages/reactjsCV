@@ -1,12 +1,10 @@
 import React, {useState} from 'react';
-import { Layer, Box, Grommet, Button, Collapsible, ResponsiveContext } from 'grommet';
+import {Box, Grommet} from 'grommet';
 import Navbar from './Components/Navbar.js'
-import About from './Components/About.js'
-import Contact from './Components/Contact.js'
-import Formation from './Components/Formation.js'
-import Description from './Components/Description.js'
-import Exppro from './Components/Exppro.js'
+import Home from './Components/Home.js'
 import background from './background.jpg'
+import Formulaire from './Form/Formulaire.js';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 
 const theme = {
@@ -23,63 +21,18 @@ font: {
 function App() {
 const [showSidebar, setShowSidebar] = useState(false);
 const [isSelected, setisSelected] = useState("ABOUT");
+console.log("isSelected : " + isSelected)
 return (
 <Grommet theme={theme} full>
-  <ResponsiveContext.Consumer>
-    {size => (
       <Box fill style={{backgroundImage: `url(${background})`}}>
-          <Navbar setisSelected={setisSelected} setShowSidebar={setShowSidebar} showSidebar={showSidebar} ></Navbar>
-      <Box direction='row' flex overflow={{ horizontal : 'hidden' }}>
-        <Box flex align='center' justify='center'>
-          {
-            isSelected === "ABOUT" ?
-            <About ></About>
-            : isSelected === "DESCRIPTION" ?
-            <Description></Description>
-            : isSelected === "FORMATION" ?
-            <Formation></Formation>
-            :   isSelected === "EXPPRO" &&
-            <Exppro></Exppro> 
-          }
-        </Box>
-            {(!showSidebar || size !== 'small') ? (
-          <Collapsible direction="horizontal" open={showSidebar}>
-          <Box
-            flex
-            width='medium'
-            background={{ color: "light-1", opacity: "0.7" }}
-            elevation='small'
-            align='center'
-            justify='center'
-          >
-            <Contact></Contact>
-          </Box>
-          </Collapsible>
-        ): (
-          <Layer>
-            <Box
-              background={{ color: "light-1", opacity: "0.7" }}
-              tag='header'
-              justify='end'
-              align='center'
-              direction='row'
-              >
-            </Box>
-            <Box
-              fill
-              background={{ color: "light-1", opacity: "0.7" }}
-              align='center'
-              justify='center'
-              >
-                <Contact></Contact>
-              </Box>
-          </Layer>
-        )
-        })
-        </Box>
+        <Navbar setisSelected={setisSelected} setShowSidebar={setShowSidebar} showSidebar={showSidebar} ></Navbar>
+      <Router>
+          <Switch>
+          <Route exact path="/" component={() => <Home isSelected={isSelected} showSidebar={showSidebar} />} />
+          <Route exact path="/formulaire" component={() => <Formulaire />} />
+          </Switch>      
+      </Router>
       </Box>
-    )}
-    </ResponsiveContext.Consumer>
 </Grommet>
 );
 }

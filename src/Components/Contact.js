@@ -1,7 +1,6 @@
 import React from 'react'
 import {  Image, Box, Heading, Text, Button } from 'grommet';      
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import Formulaire from '../Form/Formulaire.js'
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 const Contact = () => {  
     return(
@@ -21,12 +20,10 @@ const Contact = () => {
 
             <Text color="Black" margin="medium"> Permis B vehiculé</Text>
             <Router>
+                <Link to={'/formulaire'}>Here</Link>
                 <Button><Heading level="3"><Link to={'/formulaire'} className="nav-link">Me contacter</Link></Heading></Button>
-                <Switch>
-                    <Route path='/formulaire' component={Formulaire} />
-                </Switch>
             </Router>
-        </Box>
+        </Box> 
     )}
                 
 export default Contact;
