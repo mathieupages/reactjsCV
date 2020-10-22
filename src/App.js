@@ -4,6 +4,9 @@ import { FormClose, Notification } from 'grommet-icons';
 import Navbar from './Navbar.js'
 import About from './About.js'
 import Contact from './Contact.js'
+import Formation from './Formation.js'
+import Description from './Description.js'
+import Exppro from './Exppro.js'
 import background from './background3.png'
 
 
@@ -21,16 +24,26 @@ font: {
 
 function App() {
 const [showSidebar, setShowSidebar] = useState(true);
+const [isSelected, setisSelected] = useState("ABOUT");
 return (
 <Grommet theme={theme} full>
   <ResponsiveContext.Consumer>
     {size => (
       <Box fill style={{backgroundImage: `url(${background})`}}>
-      <Navbar></Navbar>
+      <Navbar setisSelected={setisSelected} ></Navbar>
         <Button icon={<Notification />} onClick={() => setShowSidebar(!showSidebar)} />
       <Box direction='row' flex overflow={{ horizontal : 'hidden' }}>
         <Box flex align='center' justify='center'>
-          <About></About>
+          {
+          isSelected === "ABOUT" ?
+          <About ></About>
+          : isSelected === "DESCRIPTION" ?
+          <Description></Description>
+          : isSelected === "FORMATION" ?
+          <Formation></Formation>
+          :   isSelected === "EXPPRO" ?
+          <Exppro></Exppro> : <About></About>
+        }
         </Box>
         {(!showSidebar || size !== 'small') ? (
           <Collapsible direction="horizontal" open={showSidebar}>

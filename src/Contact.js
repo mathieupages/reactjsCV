@@ -1,29 +1,24 @@
 import React from 'react'
-import {  Image, Box, Heading } from 'grommet';      
+import {  Image, Box, Heading, Text } from 'grommet';      
 
 
 const Contact = () => {  
     return(
-        <Box>
+        <Box align="center" justify="center">
             <Box height="small" width="small">
                 <Image
                     fit="cover"
                     src="./photo.jpg"
                 />
             </Box>
-            <Heading > Contact </Heading>
-            <p>
-                27 mai 1990
-            </p>
-            <p>
-                06.75.51.01.41
-            </p>
-            <p>
-                pagesmat@gmail.com
-            </p>
-            <p>
-                Permis B vehiculé
-            </p>
+            <Heading color="Black"> Contact </Heading>
+            <Text color="Black">27 mai 1990</Text>
+
+            <Text color="Black">06.75.51.01.41</Text>
+
+            <Text color="Black">pagesmat@gmail.com</Text>
+
+            <Text color="Black"> Permis B vehiculé</Text>
         </Box>
     )}
                 
