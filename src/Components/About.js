@@ -1,7 +1,5 @@
 import React from 'react';
 import Crawl from 'react-star-wars-crawl'
-import {Card , CardHeader, CardBody, Text, CardFooter, Anchor} from 'grommet';
-import { Facebook, Instagram, Linkedin, Github } from 'grommet-icons'
 import 'react-star-wars-crawl/lib/index.css'
 
 

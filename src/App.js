@@ -1,13 +1,12 @@
 import React, {useState} from 'react';
 import { Layer, Box, Grommet, Button, Collapsible, ResponsiveContext } from 'grommet';
-import Navbar from './Navbar.js'
-import About from './About.js'
-import Contact from './Contact.js'
-import Formation from './Formation.js'
-import Description from './Description.js'
-import Exppro from './Exppro.js'
-import background from './background4.jpg'
-
+import Navbar from './Components/Navbar.js'
+import About from './Components/About.js'
+import Contact from './Components/Contact.js'
+import Formation from './Components/Formation.js'
+import Description from './Components/Description.js'
+import Exppro from './Components/Exppro.js'
+import background from './background.jpg'
 
 
 const theme = {
