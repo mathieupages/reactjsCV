@@ -25,11 +25,11 @@ console.log("isSelected : " + isSelected)
 return (
 <Grommet theme={theme} full>
       <Box fill style={{backgroundImage: `url(${background})`}}>
-        <Navbar setisSelected={setisSelected} setShowSidebar={setShowSidebar} showSidebar={showSidebar} ></Navbar>
       <Router>
+        <Navbar setisSelected={setisSelected} setShowSidebar={setShowSidebar} showSidebar={showSidebar} ></Navbar>
           <Switch>
           <Route exact path="/" component={() => <Home isSelected={isSelected} showSidebar={showSidebar} />} />
-          <Route exact path="/formulaire" component={() => <Formulaire />} />
+          <Route exact path="/formulaire" component={Formulaire} />
           </Switch>      
       </Router>
       </Box>
