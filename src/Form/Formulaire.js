@@ -49,7 +49,7 @@ const Formulaire = (props) => {
                     <TextInput value={mail} onChange={handleChangeMail} placeholder="type here" />
                 </FormField>
                 <FormField label="Message">
-                    <TextArea value={message} onChange={handleChangeMessage} placeholder="type here"/>
+                    <TextArea value={message} onChange={handleChangeMessage} placeholder="type here" resize="vertical"/>
                 </FormField>
                 <Button margin="large" justify="center" type="submit" primary label="Envoyer" />
             </Form>
