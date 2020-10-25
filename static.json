@@ -2,6 +2,6 @@
     "root": "build/",
     "routes": {
         "/**": "index.html",
-        "/formulaire":"formulaire.js"
+        "/formulaire":"/Form/Formulaire.js"
     }
 }
