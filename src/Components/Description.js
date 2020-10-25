@@ -42,10 +42,10 @@ const Description = () => {
                 />
             </CardBody>
             <CardFooter background="light-0" justify="center">
-                <a href="https://www.facebook.com/mathieu.pages.92"><Anchor icon={<Facebook />} color="Black" hoverIndicator /></a>
-                <a href="https://www.instagram.com/pagesmathieu/?hl=fr"><Anchor icon={<Instagram />} color="Black" hoverIndicator /></a>
-                <a href="https://www.linkedin.com/in/pagesmathieu/"><Anchor icon={<Linkedin />} color="Black" hoverIndicator /></a>
-                <a href="https://github.com/mathieupages/reactjsCV"><Anchor icon={<Github />} color="Black" hoverIndicator /></a>
+                <Anchor icon={<Facebook />} color="Black" hoverIndicator href="https://www.facebook.com/mathieu.pages.92"/>
+                <Anchor icon={<Instagram />} color="Black" hoverIndicator href="https://www.instagram.com/pagesmathieu/?hl=fr"/>
+                <Anchor icon={<Linkedin />} color="Black" hoverIndicator href="https://www.linkedin.com/in/pagesmathieu/"/>
+                <Anchor icon={<Github />} color="Black" hoverIndicator href="https://github.com/mathieupages/reactjsCV"/>
             </CardFooter>
         </Card>
 

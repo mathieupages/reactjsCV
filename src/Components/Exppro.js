@@ -9,10 +9,10 @@ const Exppro = () => {
             </CardHeader>
             <CardBody align='center' pad="xsmall">
                 <ul>
-                    <Text margin="small">
+                    <Text margin="xsmall">
                         <li> Actuellement : En alternance SMSFactor – Nice Developpeur full stack</li>
                         </Text>
-                    <Text margin="small">
+                    <Text margin="xsmall">
                         <li>2015-2018 Technicien assistant utilisateur- Econocom – Valbonne Sous-Traitance à Thalès Underwater System
                             <ul>
                                 <li>Gestion des incidents par l’outils de ticketing (KISS)</li>
@@ -21,7 +21,7 @@ const Exppro = () => {
                             </ul>
                         </li>
                     </Text>
-                    <Text margin="small">
+                    <Text margin="xsmall">
                         <li>Assistant des utilisateurs à l’utilisation des postes de travail 2013- 2014 Support informatique – Hôtel l’Apogée Courchevel
                             <ul>
                                 <li>Installations et préparation des nouveaux équipements</li>
@@ -30,7 +30,7 @@ const Exppro = () => {
                             </ul>
                         </li>
                     </Text>
-                    <Text margin="small">
+                    <Text margin="xsmall">
                     <li>2013 Assistant informatique – Hôtel Eden Roc et Château St Martin En alternance
                         <ul>
                             <li>Support des utilisateurs et clients des hôtels</li>
@@ -38,7 +38,7 @@ const Exppro = () => {
                         </ul>
                     </li>
                     </Text>
-                    <Text margin="small">
+                    <Text margin="xsmall">
                     <li> Depuis 2009 divers job d’été
                         <ul>
                             <li>Serveur, Belambra Grasse</li>
@@ -51,10 +51,10 @@ const Exppro = () => {
                 </ul>
             </CardBody>
             <CardFooter background="light-0" justify="center">
-                <a href="https://www.facebook.com/mathieu.pages.92"><Anchor icon={<Facebook />} color="black" hoverIndicator /></a>
-                <a href="https://www.instagram.com/pagesmathieu/?hl=fr"><Anchor icon={<Instagram />} color="black" hoverIndicator /></a>
-                <a href="https://www.linkedin.com/in/pagesmathieu/"><Anchor icon={<Linkedin />} color="black" hoverIndicator /></a>
-                <a href="https://github.com/mathieupages/reactjsCV"><Anchor icon={<Github />} color="black" hoverIndicator /></a>
+                <Anchor icon={<Facebook />} color="Black" hoverIndicator href="https://www.facebook.com/mathieu.pages.92" />
+                <Anchor icon={<Instagram />} color="Black" hoverIndicator href="https://www.instagram.com/pagesmathieu/?hl=fr" />
+                <Anchor icon={<Linkedin />} color="Black" hoverIndicator href="https://www.linkedin.com/in/pagesmathieu/" />
+                <Anchor icon={<Github />} color="Black" hoverIndicator href="https://github.com/mathieupages/reactjsCV" />
             </CardFooter>
         </Card>
 
